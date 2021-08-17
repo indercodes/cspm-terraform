@@ -1,15 +1,9 @@
 terraform {
-#  backend "s3" {
-#    bucket = "terraform-state-github-actions"
-#    key    = "terraform/terraform-aws-security-group"
-#    region = "ap-south-1"
-#  }
-backend "remote" {
-    organization = "devocops"
-    workspaces {
-      name = "github-actions-terraform"
-      }
-}
+  backend "s3" {
+    bucket = "terraform-state-github-actions"
+    key    = "terraform/terraform-aws-sg/terraform.tfstate"
+    region = "ap-south-1"
+  }
 }
 
 provider "aws" {
