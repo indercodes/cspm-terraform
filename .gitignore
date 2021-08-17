@@ -1,0 +1,3 @@
+.terraform
+.terraform.lock.hcl
+/AWS/NIST-800-53/tmp
