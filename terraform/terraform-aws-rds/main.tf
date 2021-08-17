@@ -80,7 +80,7 @@ module "db" {
   major_engine_version = "8.0"      # DB option group
   instance_class       = "db.t2.micro"
 
-  allocated_storage     = 20
+  allocated_storage     = 30
   max_allocated_storage = 100
   storage_encrypted     = false
 
