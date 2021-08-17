@@ -1,13 +1,13 @@
 terraform {
   backend "s3" {
-    bucket = "cspm-terraform-state"
-    key    = "terraform/terraform-aws-rds"
+    bucket = "terraform-state-github-actions"
+    key    = "terraform/terraform-aws-rds/terraform.tfstate"
     region = "ap-south-1"
   }
 }
 
 provider "aws" {
-  region = local.region
+  region = "ap-south-1"
 }
 
 locals {
@@ -80,7 +80,7 @@ module "db" {
   major_engine_version = "8.0"      # DB option group
   instance_class       = "db.t2.micro"
 
-  allocated_storage     = 20
+  allocated_storage     = 30
   max_allocated_storage = 100
   storage_encrypted     = false
 
