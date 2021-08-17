@@ -2,8 +2,8 @@ name: 'Terraform'
 on:
   pull_request:
 jobs:
-  terraform-sg:
-    name: 'Terraform-sg'
+  terraform-rds:
+    name: 'Terraform-rds'
     runs-on: ubuntu-latest
     env:
       working-directory: ./terraform/terraform-aws-rds
