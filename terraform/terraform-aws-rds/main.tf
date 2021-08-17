@@ -1,15 +1,9 @@
 terraform {
-#  backend "s3" {
-#    bucket = "cspm-terraform-state"
-#    key    = "terraform/terraform-aws-rds"
-#    region = "ap-south-1"
-#  }
-backend "remote" {
-    organization = "devocops"
-    workspaces {
-      name = "github-actions-terraform"
-      }
-}
+  backend "s3" {
+    bucket = "cspm-terraform-state"
+    key    = "terraform/terraform-aws-rds"
+    region = "ap-south-1"
+  }
 }
 
 provider "aws" {
