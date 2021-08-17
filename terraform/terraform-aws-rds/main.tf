@@ -1,13 +1,13 @@
 terraform {
   backend "s3" {
-    bucket = "cspm-terraform-state"
-    key    = "terraform/terraform-aws-rds"
+    bucket = "terraform-state-github-actions"
+    key    = "terraform/terraform-aws-rds/terraform.tfstate"
     region = "ap-south-1"
   }
 }
 
 provider "aws" {
-  region = local.region
+  region = "ap-south-1"
 }
 
 locals {
