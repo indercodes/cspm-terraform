@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "cspm-terraform-state"
-    key    = "terraform/terraform-aws-security-group"
+    bucket = "terraform-state-github-actions"
+    key    = "terraform/terraform-aws-sg/terraform.tfstate"
     region = "ap-south-1"
   }
 }
@@ -29,7 +29,7 @@ module "security_group_tcp" {
   vpc_id        = module.vpc.vpc_id
   allowed_ip    = ["0.0.0.0/0"]
   allowed_ipv6  = ["::/0"]
-  allowed_ports = [20, 21, 22, 23, 25, 445, 1433, 3389, 4333, 3306, 5432, 5500, 5900, 1521, 5601, 8020, 50070, 50470, 4505, 4506, 2375, 2376]
+  allowed_ports = [20, 21, 22, 23, 25, 445, 1433, 3389, 4333, 3306, 5432, 5500, 5900, 1521, 5601, 8020, 50070, 50470, 4505, 4506, 2375, 2376, 53]
 }
 
 module "security_group_udp" {
