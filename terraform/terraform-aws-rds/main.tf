@@ -84,7 +84,7 @@ module "db" {
   max_allocated_storage = 100
   storage_encrypted     = false
 
-  name     = "completeMysql"
+  name     = "inderpreetcompleteMysql"
   username = "complete_mysql"
   password = "YourPwdShouldBeLongAndSecure!"
   port     = 3306
